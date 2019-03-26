@@ -15,9 +15,19 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Starts the AccelActivity
+     * @param v, the view
      */
     public void startAccel(View v){
         Intent start = new Intent(this, AccelActivity.class);
+        startActivity(start);
+    }
+
+    /**
+     * Starts the CompassActivity
+     * @param v, the view
+     */
+    public void startCompass(View v){
+        Intent start = new Intent(this, CompassActivity.class);
         startActivity(start);
     }
 }

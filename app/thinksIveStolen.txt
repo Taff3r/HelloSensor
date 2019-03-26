@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/7856143/displaying-accelerometer-values-in-android
