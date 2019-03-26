@@ -1,6 +1,5 @@
 package com.example.hellosensor;
 
-import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -27,7 +26,7 @@ public class AccelActivity extends AppCompatActivity implements SensorEventListe
         this.sensorMan = (SensorManager) getSystemService(SENSOR_SERVICE);
         this.sensor = sensorMan.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         sensorMan.registerListener(this, this.sensor, SensorManager.SENSOR_DELAY_NORMAL);
-        this.display = (TextView) findViewById(R.id.txtValues);
+        this.display =  findViewById(R.id.txtValues);
     }
 
     @Override
@@ -47,7 +46,7 @@ public class AccelActivity extends AppCompatActivity implements SensorEventListe
     private void updateText(){
         this.display.setText(
                 "The Values are: \n"
-                + this.x + ", " + this.y + ", " + this.z + "\n"
+                + this.x + "\n" + this.y + "\n" + this.z + "\n"
                 + "Diagonal :" + this.abs
         );
     }
