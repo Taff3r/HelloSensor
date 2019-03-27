@@ -3,3 +3,4 @@ https://stackoverflow.com/questions/3740228/first-android-app-how-to-access-the-
 https://stackoverflow.com/questions/29047902/how-to-add-an-image-to-the-drawable-folder-in-android-studio
 https://purepng.com/photo/20190/clipart-compass
 https://www.javacodegeeks.com/2013/09/android-compass-code-example.html
+https://stackoverflow.com/questions/18033260/set-background-color-android

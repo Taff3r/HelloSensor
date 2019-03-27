@@ -1,5 +1,6 @@
 package com.example.hellosensor;
 
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -10,12 +11,12 @@ import android.widget.TextView;
 
 
 public class AccelActivity extends AppCompatActivity implements SensorEventListener{
+    private final double COLOR_SCALAR = 255/10;
     private SensorManager sensorMan;
     private Sensor sensor;
     private double x;
     private double y;
     private double z;
-    private double abs;
     private TextView display;
 
 
@@ -34,8 +35,7 @@ public class AccelActivity extends AppCompatActivity implements SensorEventListe
         this.x = e.values[0];
         this.y = e.values[1];
         this.z = e.values[2];
-        this.abs = Math.sqrt(x*x + y*y + z*z);
-        updateText();
+        updateUI();
     }
 
     @Override
@@ -43,11 +43,19 @@ public class AccelActivity extends AppCompatActivity implements SensorEventListe
         // Do nothing for now
     }
 
-    private void updateText(){
+    private void updateUI(){
+        int r = getColorValue(x);
+        int g = getColorValue(y);
+        int b = getColorValue(z);
+        getWindow().getDecorView().setBackgroundColor(Color.rgb(r,g,b));
         this.display.setText(
                 "The Values are: \n"
-                + this.x + "\n" + this.y + "\n" + this.z + "\n"
-                + "Diagonal :" + this.abs
+                        + this.x + "\n" + this.y + "\n" + this.z + "\n"
+                        + "Current color (RGB): " + r + " "+ g + " " + b
         );
+    }
+
+    private int getColorValue(double value){
+        return (int) (Math.abs(value) * this.COLOR_SCALAR);
     }
 }
