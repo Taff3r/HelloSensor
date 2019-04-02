@@ -4,3 +4,4 @@ https://stackoverflow.com/questions/29047902/how-to-add-an-image-to-the-drawable
 https://purepng.com/photo/20190/clipart-compass
 https://www.javacodegeeks.com/2013/09/android-compass-code-example.html
 https://stackoverflow.com/questions/18033260/set-background-color-android
+http://docs.kony.com/konylibrary/visualizer/visualizer_user_guide/Content/AndroidManifest_File.htm
